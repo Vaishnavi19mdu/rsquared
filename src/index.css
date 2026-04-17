@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Premium Palette */
+  --color-primary: #6495ED;
+  --color-secondary: #98AFC7;
+  --color-dark-accent: #29465B;
+  --color-warm-accent: #362511;
+  --color-soft-accent: #D7B38C;
+  --color-dashboard-bg: #FAFAFA;
+  
+  /* Status Colors */
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-warm-accent bg-dashboard-bg;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+.glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
